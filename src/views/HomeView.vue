@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main class="h-screen w-full flex justify-center align-center p-16">
 		<MainPresenter />
 	</main>
 </template>
