@@ -5,6 +5,4 @@
 		<slot></slot>
 	</div>
 </template>
-<script setup lang="ts">
-defineProps<{ msg: string }>();
-</script>
+<script setup lang="ts"></script>

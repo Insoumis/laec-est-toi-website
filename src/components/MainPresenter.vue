@@ -4,9 +4,19 @@
 	>
 		<BlinkAnimation class="w-96 mx-auto" image-name="logo hd menu/logo" />
 
-		<Button :msg="'Jouer sur navigateur'"> Jouer sur navigateur </Button>
-		<Button :msg="'Jouer sur navigateur'"> Télécharger </Button>
-		<Button :msg="'Jouer sur navigateur'"> Jouer sur android </Button>
+		<Button> Jouer sur navigateur </Button>
+
+		<Button
+			><div class="flex flex">
+				<a :href="currDLLink">Télécharger </a>
+
+				<a :href="`/dl/Windows`"><IconWindow class="w-6 h-6" /> </a>
+
+				<a :href="`/dl/Linux`"><IconLinux class="w-6 h-6" /> </a>
+				<a :href="`/dl/Linux`"><IconMac class="w-6 h-6" /> </a>
+			</div>
+		</Button>
+		<Button> Jouer sur android </Button>
 		<p class="text-xs text-white text-center mx-2">
 			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
 			des bénévoles du
@@ -20,4 +30,37 @@
 <script setup lang="ts">
 import Button from "./MainButton.vue";
 import BlinkAnimation from "./BlinkAnimation.vue";
+import { computed } from "vue";
+import IconMac from "./icon/IconMac.vue";
+import IconLinux from "./icon/IconLinux.vue";
+import IconWindow from "./icon/IconWindow.vue";
+
+const currDLLink = computed(
+	() => new URL(`/dl/${getOs() ? getOs() : "Windows"}`, import.meta.url).href
+);
+
+const getOs = () => {
+	var userAgent = window.navigator.userAgent,
+		platform =
+			window.navigator?.userAgentData?.platform ??
+			window.navigator.platform,
+		macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
+		windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
+		iosPlatforms = ["iPhone", "iPad", "iPod"],
+		os = null;
+
+	if (macosPlatforms.indexOf(platform) !== -1) {
+		os = "MacOS";
+	} else if (iosPlatforms.indexOf(platform) !== -1) {
+		os = "iOS";
+	} else if (windowsPlatforms.indexOf(platform) !== -1) {
+		os = "Windows";
+	} else if (/Android/.test(userAgent)) {
+		os = "Android";
+	} else if (!os && /Linux/.test(platform)) {
+		os = "Linux";
+	}
+
+	return os;
+};
 </script>
