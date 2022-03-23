@@ -5,6 +5,14 @@
 		<Button :msg="'Jouer sur navigateur'"> Jouer sur navigateur </Button>
 		<Button :msg="'Jouer sur navigateur'"> Télécharger </Button>
 		<Button :msg="'Jouer sur navigateur'"> Jouer sur android </Button>
+		<p class="text-xs text-white text-center mx-2">
+			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
+			des bénévoles du
+			<span class="underline">Discord insoumis</span> avec l'accord du
+			créateur de BABA IS YOU que nous remercions pour son œuvre et sa
+			bienveillance mais avec lequel nous ne sommes nullement affiliés.
+			Moteur de jeu : Godot 3.4.
+		</p>
 	</div>
 </template>
 <script setup lang="ts">
