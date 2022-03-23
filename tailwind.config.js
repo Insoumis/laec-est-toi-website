@@ -5,6 +5,7 @@ module.exports = {
 			colors: {
 				"main-grey": "#201F1F",
 				white: "#FFFFFF",
+				black: "#131313",
 			},
 		},
 	},

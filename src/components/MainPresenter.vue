@@ -1,5 +1,7 @@
 <template>
-	<div class="bg-main-grey h-3/12 w-4/12 space-y-6 flex flex-col p-4">
+	<div
+		class="bg-main-grey border shadow-2xl border-black rounded-2xl h-3/12 w-4/12 space-y-6 flex flex-col p-4"
+	>
 		<BlinkAnimation class="w-96 mx-auto" image-name="logo hd menu/logo" />
 
 		<Button :msg="'Jouer sur navigateur'"> Jouer sur navigateur </Button>
