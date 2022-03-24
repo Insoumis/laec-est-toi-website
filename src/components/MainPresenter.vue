@@ -6,13 +6,13 @@
 		<video controls poster="/preview.jpg">
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
-		<Button class="flex justify-center items-center space-x-4">
+		<Button class="flex items-center space-x-4">
 			<img class="h-6 w-6" src="/icons/jouer32.png" />
 			<router-link class="" to="/game"> Jouer sur navigateur</router-link>
 		</Button>
 
-		<Button
-			><div class="flex justify-center space-x-4">
+		<Button class="hidden lg:block"
+			><div class="flex space-x-4">
 				<img class="h-6 w-6" src="/icons/commandes32.png" />
 
 				<a :href="currDLLink"> Télécharger </a>
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</Button>
-		<Button class="flex align-center justify-center space-x">
+		<Button class="flex align-center space-x">
 			<img class="h-6 w-6" src="/icons/arcade32.png" /> Jouer sur android
 		</Button>
 		<p class="mx-2 text-xs text-center text-white">
