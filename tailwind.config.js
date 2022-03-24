@@ -7,6 +7,10 @@ module.exports = {
 				white: "#FFFFFF",
 				black: "#131313",
 			},
+			fontFamily: {
+				sofia: ["Sofia-Regular", "sans-serif"],
+				draxel: ["Draxel", "serif"],
+			},
 		},
 	},
 	plugins: [],

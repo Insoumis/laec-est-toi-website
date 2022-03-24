@@ -4,9 +4,9 @@
 
 @font-face {
 	font-family: "Draxel";
-	src: url("/font/Draxel.ttf") format("ttf");
+	src: url("/font/Draxel.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Sofia-Regular";
-	src: url("/font/Sofia-Regular.ttf") format("ttf");
+	src: url("/font/Sofia-Regular.ttf") format("truetype");
 }
