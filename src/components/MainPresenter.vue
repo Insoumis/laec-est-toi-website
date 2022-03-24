@@ -3,8 +3,8 @@
 		class="flex flex-col sm:w-4/12 w-full p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
 	>
 		<BlinkAnimation class="mx-auto w-96" image-name="logo hd menu/logo" />
-		<video controls>
-			<source src="@/assets/video/teaser.mp4" type="video/mp4" />
+		<video controls poster="/preview.jpg">
+			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
 		<Button>
 			<router-link to="/game">Jouer sur navigateur</router-link>
