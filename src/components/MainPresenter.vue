@@ -1,9 +1,9 @@
 <template>
 	<div
-		class="bg-main-grey border shadow-2xl border-black rounded-2xl h-3/12 w-4/12 space-y-6 flex flex-col p-4"
+		class="flex flex-col sm:w-4/12 w-full p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
 	>
-		<BlinkAnimation class="w-96 mx-auto" image-name="logo hd menu/logo" />
-		<video controls="controls">
+		<BlinkAnimation class="mx-auto w-96" image-name="logo hd menu/logo" />
+		<video controls>
 			<source src="@/assets/video/teaser.mp4" type="video/mp4" />
 		</video>
 		<Button> Jouer sur navigateur </Button>
@@ -19,7 +19,7 @@
 			</div>
 		</Button>
 		<Button> Jouer sur android </Button>
-		<p class="text-xs text-white text-center mx-2">
+		<p class="mx-2 text-xs text-center text-white">
 			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
 			des bénévoles du
 			<span class="underline">Discord insoumis</span> avec l'accord du

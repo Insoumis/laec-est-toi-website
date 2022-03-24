@@ -1,6 +1,6 @@
 <template>
 	<main
-		class="relative flex justify-center w-full min-h-screen p-16 align-center"
+		class="relative flex justify-center w-full min-h-screen sm:p-16 align-center"
 	>
 		<BackgroundImages />
 		<MainPresenter class="relative" />
