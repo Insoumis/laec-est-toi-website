@@ -7,13 +7,13 @@
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
 		<Button class="flex items-center space-x-4">
-			<IconPlay class="h-6 w-6" />
+			<IconPlay class="w-6 h-6" />
 			<router-link class="" to="/game"> Jouer sur navigateur</router-link>
 		</Button>
 
 		<Button class="hidden lg:block"
 			><div class="flex space-x-4">
-				<IconCommand class="h-6 w-6" />
+				<IconCommand class="w-6 h-6" />
 				<a :href="currDLLink"> Télécharger </a>
 				<div class="flex">
 					<a :href="`/dl/Windows`"
@@ -34,7 +34,7 @@
 			</div>
 		</Button>
 		<Button class="flex align-center space-x">
-			<IconArcade class="h-6 w-6" />
+			<IconArcade class="w-6 h-6" />
 			Jouer sur android
 		</Button>
 		<p class="mx-2 text-xs text-center text-white">
