@@ -6,23 +6,27 @@
 		<video controls poster="/preview.jpg">
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
-		<Button>
-			<router-link class="draxel" to="/game"
-				>Jouer sur navigateur</router-link
-			>
+		<Button class="flex justify-center items-center space-x-4">
+			<img class="h-6 w-6" src="/icons/jouer32.png" />
+			<router-link class="" to="/game"> Jouer sur navigateur</router-link>
 		</Button>
 
 		<Button
-			><div class="flex justify-center">
-				<a :href="currDLLink">Télécharger </a>
+			><div class="flex justify-center space-x-4">
+				<img class="h-6 w-6" src="/icons/commandes32.png" />
 
-				<a :href="`/dl/Windows`"><IconWindow class="w-6 h-6" /> </a>
+				<a :href="currDLLink"> Télécharger </a>
+				<div class="flex">
+					<a :href="`/dl/Windows`"><IconWindow class="w-6 h-6" /> </a>
 
-				<a :href="`/dl/Linux`"><IconLinux class="w-6 h-6" /> </a>
-				<a :href="`/dl/Linux`"><IconMac class="w-6 h-6" /> </a>
+					<a :href="`/dl/Linux`"><IconLinux class="w-6 h-6" /> </a>
+					<a :href="`/dl/Linux`"><IconMac class="w-6 h-6" /> </a>
+				</div>
 			</div>
 		</Button>
-		<Button> Jouer sur android </Button>
+		<Button class="flex align-center justify-center space-x">
+			<img class="h-6 w-6" src="/icons/arcade32.png" /> Jouer sur android
+		</Button>
 		<p class="mx-2 text-xs text-center text-white">
 			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
 			des bénévoles du
