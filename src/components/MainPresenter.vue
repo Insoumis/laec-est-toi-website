@@ -9,7 +9,7 @@
 		<Button> Jouer sur navigateur </Button>
 
 		<Button
-			><div class="flex">
+			><div class="flex justify-center">
 				<a :href="currDLLink">Télécharger </a>
 
 				<a :href="`/dl/Windows`"><IconWindow class="w-6 h-6" /> </a>
