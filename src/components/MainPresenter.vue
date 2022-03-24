@@ -82,12 +82,8 @@ const getOs = () => {
 
 	if (macosPlatforms.indexOf(platform) !== -1) {
 		os = "MacOS";
-	} else if (iosPlatforms.indexOf(platform) !== -1) {
-		os = "iOS";
 	} else if (windowsPlatforms.indexOf(platform) !== -1) {
 		os = "Windows";
-	} else if (/Android/.test(userAgent)) {
-		os = "Android";
 	} else if (!os && /Linux/.test(platform)) {
 		os = "Linux";
 	}
