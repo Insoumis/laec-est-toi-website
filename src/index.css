@@ -8,5 +8,5 @@
 }
 @font-face {
 	font-family: "Sofia-Regular";
-	src: url("/font/Sofia-Regular.ttf") format("truetype");
+	src: url("/font/Sofia-Regular.otf") format("opentype");
 }
