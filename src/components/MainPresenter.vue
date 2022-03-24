@@ -28,7 +28,7 @@
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
 						</a>
-						<a :href="`/dl/Linux`"
+						<a :href="`/dl/MacOS`"
 							><IconMac
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
@@ -48,7 +48,9 @@
 			créateur de BABA IS YOU, que nous remercions et avec lequel nous ne
 			sommes pas affiliés.
 		</p>
-		<div></div>
+		<div class="w-full h-full flex justify-center space-x-4">
+			<IconGodot /> <IconLibre />
+		</div>
 	</div>
 </template>
 <script setup lang="ts">
@@ -61,6 +63,8 @@ import IconWindow from "./icon/IconWindow.vue";
 import IconCommand from "./icon/IconCommand.vue";
 import IconPlay from "./icon/IconPlay.vue";
 import IconArcade from "./icon/IconArcade.vue";
+import IconGodot from "./icon/IconGodot.vue";
+import IconLibre from "./icon/IconLibre.vue";
 
 const currDLLink = computed(
 	() => new URL(`/dl/${getOs() ? getOs() : "Windows"}`, import.meta.url).href
