@@ -6,7 +6,9 @@
 		<video controls>
 			<source src="@/assets/video/teaser.mp4" type="video/mp4" />
 		</video>
-		<Button> Jouer sur navigateur </Button>
+		<Button>
+			<router-link to="/game">Jouer sur navigateur</router-link>
+		</Button>
 
 		<Button
 			><div class="flex justify-center">
