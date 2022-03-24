@@ -7,25 +7,35 @@
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
 		<Button class="flex items-center space-x-4">
-			<img class="h-6 w-6" src="/icons/jouer32.png" />
+			<IconPlay class="h-6 w-6" />
 			<router-link class="" to="/game"> Jouer sur navigateur</router-link>
 		</Button>
 
 		<Button class="hidden lg:block"
 			><div class="flex space-x-4">
-				<img class="h-6 w-6" src="/icons/commandes32.png" />
-
+				<IconCommand class="h-6 w-6" />
 				<a :href="currDLLink"> Télécharger </a>
 				<div class="flex">
-					<a :href="`/dl/Windows`"><IconWindow class="w-6 h-6" /> </a>
+					<a :href="`/dl/Windows`"
+						><IconWindow
+							class="w-6 h-6 text-white hover:text-gold"
+						/>
+					</a>
 
-					<a :href="`/dl/Linux`"><IconLinux class="w-6 h-6" /> </a>
-					<a :href="`/dl/Linux`"><IconMac class="w-6 h-6" /> </a>
+					<a :href="`/dl/Linux`"
+						><IconLinux
+							class="w-6 h-6 text-white hover:text-gold"
+						/>
+					</a>
+					<a :href="`/dl/Linux`"
+						><IconMac class="w-6 h-6 text-white hover:text-gold" />
+					</a>
 				</div>
 			</div>
 		</Button>
 		<Button class="flex align-center space-x">
-			<img class="h-6 w-6" src="/icons/arcade32.png" /> Jouer sur android
+			<IconArcade class="h-6 w-6" />
+			Jouer sur android
 		</Button>
 		<p class="mx-2 text-xs text-center text-white">
 			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
@@ -44,6 +54,9 @@ import { computed } from "vue";
 import IconMac from "./icon/IconMac.vue";
 import IconLinux from "./icon/IconLinux.vue";
 import IconWindow from "./icon/IconWindow.vue";
+import IconCommand from "./icon/IconCommand.vue";
+import IconPlay from "./icon/IconPlay.vue";
+import IconArcade from "./icon/IconArcade.vue";
 
 const currDLLink = computed(
 	() => new URL(`/dl/${getOs() ? getOs() : "Windows"}`, import.meta.url).href

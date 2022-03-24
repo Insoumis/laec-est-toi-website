@@ -6,6 +6,7 @@ module.exports = {
 				"main-grey": "#201F1F",
 				white: "#FFFFFF",
 				black: "#131313",
+				gold: "#FEEE97",
 			},
 			fontFamily: {
 				sofia: ["Sofia-Regular", "sans-serif"],
