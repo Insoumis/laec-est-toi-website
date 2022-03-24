@@ -3,11 +3,13 @@
 		class="bg-main-grey border shadow-2xl border-black rounded-2xl h-3/12 w-4/12 space-y-6 flex flex-col p-4"
 	>
 		<BlinkAnimation class="w-96 mx-auto" image-name="logo hd menu/logo" />
-
+		<video controls="controls">
+			<source src="@/assets/video/teaser.mp4" type="video/mp4" />
+		</video>
 		<Button> Jouer sur navigateur </Button>
 
 		<Button
-			><div class="flex flex">
+			><div class="flex">
 				<a :href="currDLLink">Télécharger </a>
 
 				<a :href="`/dl/Windows`"><IconWindow class="w-6 h-6" /> </a>
