@@ -6,37 +6,40 @@
 		<video controls poster="/preview.jpg">
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
-		<Button class="flex items-center space-x-4">
-			<IconPlay class="w-6 h-6" />
-			<router-link class="" to="/game"> Jouer sur navigateur</router-link>
-		</Button>
+		<div class="flex flex-col items-center h-full">
+			<Button class="flex items-center space-x-4 font-draxel">
+				<IconPlay class="w-6 h-6 mr-4" />
+				<router-link to="/game"> Jouer sur navigateur</router-link>
+			</Button>
+			<Button class="hidden lg:block font-draxel"
+				><div class="flex space-x-4">
+					<IconCommand class="w-6 h-6 mr-4" />
+					<a :href="currDLLink"> Telecharger </a>
+					<div class="flex space-x-4">
+						<a :href="`/dl/Windows`"
+							><IconWindow
+								class="w-6 h-6 text-white hover:text-gold"
+							/>
+						</a>
 
-		<Button class="hidden lg:block"
-			><div class="flex space-x-4">
-				<IconCommand class="w-6 h-6" />
-				<a :href="currDLLink"> Télécharger </a>
-				<div class="flex">
-					<a :href="`/dl/Windows`"
-						><IconWindow
-							class="w-6 h-6 text-white hover:text-gold"
-						/>
-					</a>
-
-					<a :href="`/dl/Linux`"
-						><IconLinux
-							class="w-6 h-6 text-white hover:text-gold"
-						/>
-					</a>
-					<a :href="`/dl/Linux`"
-						><IconMac class="w-6 h-6 text-white hover:text-gold" />
-					</a>
+						<a :href="`/dl/Linux`"
+							><IconLinux
+								class="w-6 h-6 text-white hover:text-gold"
+							/>
+						</a>
+						<a :href="`/dl/Linux`"
+							><IconMac
+								class="w-6 h-6 text-white hover:text-gold"
+							/>
+						</a>
+					</div>
 				</div>
-			</div>
-		</Button>
-		<Button class="flex align-center space-x">
-			<IconArcade class="w-6 h-6" />
-			Jouer sur android
-		</Button>
+			</Button>
+			<Button class="flex space-x-4 align-center font-draxel">
+				<IconArcade class="w-6 h-6 mr-4" />
+				<a>Jouer sur android </a>
+			</Button>
+		</div>
 		<p class="mx-2 text-xs text-center text-white">
 			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
 			des bénévoles du
