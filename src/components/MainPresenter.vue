@@ -7,7 +7,9 @@
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
 		<Button>
-			<router-link to="/game">Jouer sur navigateur</router-link>
+			<router-link class="draxel" to="/game"
+				>Jouer sur navigateur</router-link
+			>
 		</Button>
 
 		<Button
