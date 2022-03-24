@@ -1,24 +1,22 @@
 <template>
-	<img :src="currImgUrl" alt="animation frame" />
+	<img :src="imgUrlPerNumber[currImgNumber]" alt="animation frame" />
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { useIntervalFn } from "@vueuse/core";
+
+import frame1 from "@/assets/logo hd menu/logo1.png";
+import frame2 from "@/assets/logo hd menu/logo2.png";
+import frame3 from "@/assets/logo hd menu/logo3.png";
 
 const currImgNumber = ref<1 | 2 | 3>(1);
 
-const props = defineProps<{
-	imageName: string;
-}>();
-
-const currImgUrl = computed(
-	() =>
-		new URL(
-			`../assets/${props.imageName}${currImgNumber.value}.png`,
-			import.meta.url
-		).href
-);
+const imgUrlPerNumber = {
+	1: frame1,
+	2: frame2,
+	3: frame3,
+};
 
 const { pause, resume } = useIntervalFn(() => {
 	currImgNumber.value =
