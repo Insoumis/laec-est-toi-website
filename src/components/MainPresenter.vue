@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex flex-col sm:w-4/12 w-full p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
+		class="flex flex-col sm:w-4/12 w-full md:p-12 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
 	>
 		<BlinkAnimation class="mx-auto w-96" image-name="logo hd menu/logo" />
 		<video controls poster="/preview.jpg">
@@ -8,14 +8,15 @@
 		</video>
 		<div class="flex flex-col items-center h-full">
 			<Button class="flex items-center space-x-4 font-draxel">
-				<IconPlay class="w-6 h-6 mr-4" />
-				<router-link to="/game"> Jouer sur navigateur</router-link>
+				<IconPlay class="h-6 w-6 mr-4" />
+				<router-link to="/game">Jouer sur navigateur</router-link>
 			</Button>
 			<Button class="hidden lg:block font-draxel"
 				><div class="flex space-x-4">
-					<IconCommand class="w-6 h-6 mr-4" />
-					<a :href="currDLLink"> Telecharger </a>
-					<div class="flex space-x-4">
+					<a class="flex" :href="currDLLink">
+						<IconCommand class="h-6 w-6 mr-8" /> Telecharger</a
+					>
+					<div class="flex space-x-4 pl-4">
 						<a :href="`/dl/Windows`"
 							><IconWindow
 								class="w-6 h-6 text-white hover:text-gold"
@@ -35,19 +36,19 @@
 					</div>
 				</div>
 			</Button>
-			<Button class="flex space-x-4 align-center font-draxel">
-				<IconArcade class="w-6 h-6 mr-4" />
-				<a>Jouer sur android </a>
+			<Button class="flex align-center space-x-4 font-draxel">
+				<IconArcade class="h-6 w-6 mr-4" />
+				<a>Jouer sur android</a>
 			</Button>
 		</div>
 		<p class="mx-2 text-xs text-center text-white">
 			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
 			des bénévoles du
 			<span class="underline">Discord insoumis</span> avec l'accord du
-			créateur de BABA IS YOU que nous remercions pour son œuvre et sa
-			bienveillance mais avec lequel nous ne sommes nullement affiliés.
-			Moteur de jeu : Godot 3.4.
+			créateur de BABA IS YOU, que nous remercions et avec lequel nous ne
+			sommes pas affiliés.
 		</p>
+		<div></div>
 	</div>
 </template>
 <script setup lang="ts">
