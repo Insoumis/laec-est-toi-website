@@ -31,7 +31,7 @@
 		<iframe
 			aria-label="jeu L'AEC"
 			class="grow"
-			src="/laec-est-vous_0-5-5_html5/index.html"
+			src="/laec-est-vous_0-5-6_html5/index"
 		/>
 	</main>
 	<footer
