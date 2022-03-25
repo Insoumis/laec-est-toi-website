@@ -1,31 +1,42 @@
 <template>
 	<header
 		v-if="currRatio < 1 || height > 400"
+		aria-label="Header"
 		class="relative grid grid-cols-3 py-3 bg-black shadow-md"
 	>
-		<div class="flex items-center px-8">
+		<div aria-label="barre de navigation" class="flex items-center px-8">
 			<router-link
+				aria-label="retour a la page d'accueil"
 				class="shrink-0 p-4 pointer text-white hover:text-gold"
 				to="/"
 			>
-				<IconLeave class="w-5 h-5" />
+				<IconLeave aria-hidden="true" class="w-5 h-5" />
 			</router-link>
 			<a
+				aria-label="Lien vers le Discord Insoumis"
 				class="hidden ml-16 md:inline-block"
 				href="https://discord-insoumis.fr/"
 			>
-				<IconDiscordInsoumis class="text-white w-36 hover:text-gold"
+				<IconDiscordInsoumis
+					aria-hidden="true"
+					class="text-white w-36 hover:text-gold"
 			/></a>
 		</div>
-		<BlinkAnimation class="mx-auto w-80" />
+		<BlinkAnimation aria-hidden="true" class="mx-auto w-80" />
 	</header>
 	<main
+		aria-label="container du jeu L'AEC est toi'"
 		ref="gameContainer"
 		class="relative flex justify-center flex-1 w-full bg-main-grey align-center"
 	>
-		<iframe class="grow" src="/laec-est-vous_0-5-5_html5/index.html" />
+		<iframe
+			aria-label="jeu L'AEC"
+			class="grow"
+			src="/laec-est-vous_0-5-5_html5/index.html"
+		/>
 	</main>
 	<footer
+		aria-label="credits"
 		v-if="currRatio < 1 || height > 400"
 		class="py-5 text-center text-white bg-black shadow-md"
 	>
