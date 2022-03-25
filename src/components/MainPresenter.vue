@@ -32,7 +32,7 @@
 
 						<a
 							aria-label="Telecharger pour linux"
-							:href="`/dl/laec-est-vous_0-5-4_linux64.tar.gz`"
+							:href="`/dl/laec-est-vous_0-5-6_linux64.tar.gz`"
 						>
 							<IconLinux
 								aria-label="icone Linux"
@@ -41,7 +41,7 @@
 						</a>
 						<a
 							aria-label="Telecharger pour MacOs"
-							:href="`/dl/laec-est-vous-mac.zip`"
+							:href="`/dl/laec-est-vous.zip`"
 						>
 							<IconMac
 								aria-label="icone Mac"
@@ -108,13 +108,11 @@ const getOs = () => {
 		os = null;
 
 	if (macosPlatforms.indexOf(platform) !== -1) {
-		os = "laec-est-vous-mac.zip";
+		os = "laec-est-vous.zip";
 	} else if (windowsPlatforms.indexOf(platform) !== -1) {
 		os = "laec-est-vous-win64.zip";
-	} else if (/Android/.test(userAgent)) {
-		os = "LAEC-IS-YOU-1003/LAEC IS YOU.apk";
 	} else if (!os && /Linux/.test(platform)) {
-		os = "laec-est-vous_0-5-4_linux64.tar.gz";
+		os = "laec-est-vous_0-5-6_linux64.tar.gz";
 	}
 
 	return os;
