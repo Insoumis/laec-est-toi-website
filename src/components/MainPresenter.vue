@@ -82,7 +82,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { computed } from "vue";
+import { onMounted, ref } from "vue";
 import Button from "./MainButton.vue";
 import BlinkAnimation from "./BlinkAnimation.vue";
 import IconMac from "./icon/IconMac.vue";
@@ -93,8 +93,6 @@ import IconPlay from "./icon/IconPlay.vue";
 import IconArcade from "./icon/IconArcade.vue";
 import IconGodot from "./icon/IconGodot.vue";
 import IconLibre from "./icon/IconLibre.vue";
-
-const currDLLink = computed(() => `/dl/${getOs() ? getOs() : "Windows"}`);
 
 const getOs = () => {
 	if (import.meta.env.SSR) return null;
@@ -119,4 +117,8 @@ const getOs = () => {
 
 	return os;
 };
+
+const currDLLink = ref("");
+
+onMounted(() => (currDLLink.value = `/dl/${getOs() ? getOs() : "Windows"}`));
 </script>
