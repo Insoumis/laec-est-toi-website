@@ -46,11 +46,11 @@
 				</Button>
 			</a>
 		</div>
-		<p class="mx-2 text-xs text-center text-white">
+		<p class="mx-2 text-sm text-center text-[#BBB]">
 			Ce jeu vidéo est open-source et libre (sauf les musiques). Il a été
 			développé à 100% par des bénévoles du
 			<a
-				class="hover:text-gold underline"
+				class="hover:text-gold text-white underline"
 				href=" https://discord-insoumis.fr/"
 				>Discord insoumis</a
 			>
@@ -58,7 +58,8 @@
 			avec lequel nous ne sommes pas affiliés.
 		</p>
 		<div class="w-full h-full flex justify-center space-x-4">
-			<IconGodot class="w-6 h-6" /> <IconLibre class="w-6 h-6" />
+			<IconGodot class="w-6 h-6 text-[#BBB] hover:text-white" />
+			<IconLibre class="w-6 h-6 text-[#BBB] hover:text-white" />
 		</div>
 	</div>
 </template>
