@@ -4,9 +4,11 @@
 
 @font-face {
 	font-family: "Draxel";
+	font-display: swap;
 	src: url("/font/Draxel.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Sofia-Regular";
+	font-display: swap;
 	src: url("/font/Sofia-Regular.otf") format("opentype");
 }
