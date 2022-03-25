@@ -5,6 +5,7 @@ import {
 } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import GameView from "../views/GameView.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 export const routes = [
 	{
@@ -16,6 +17,11 @@ export const routes = [
 		path: "/game",
 		name: "game",
 		component: GameView,
+	},
+	{
+		path: "/:pathMatch(.*)*",
+		name: "404",
+		component: PageNotFound,
 	},
 ];
 
