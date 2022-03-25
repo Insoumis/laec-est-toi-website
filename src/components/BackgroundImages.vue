@@ -1,21 +1,13 @@
 <template>
 	<img
+		aria-hidden="true"
 		src="@/assets/lol.jpg"
 		class="fixed bottom-0 object-cover w-full h-full"
 		alt=""
 	/>
 
-	<!-- <img
-		class="fixed bottom-0 object-cover w-full h-full opacity-60"
-		:src="blueOverlayUrl"
-		alt="éoliennes bleues"
-	/> -->
-	<!-- <img
-		class="fixed bottom-0 object-cover w-full h-full opacity-60"
-		:src="yellowOverlayUrl"
-		alt="fusées jaunes"
-	/> -->
 	<img
+		aria-hidden="true"
 		class="fixed top-0 object-cover w-full h-full opacity-60"
 		:src="gradientUrl"
 		alt="gradient de fond"
