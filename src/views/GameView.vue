@@ -40,7 +40,12 @@
 		v-if="currRatio < 1 || height > 400"
 		class="py-5 text-center text-white bg-black shadow-md"
 	>
-		Jeu développé par des bénévoles du Discord insoumis
+		Jeu développé par des bénévoles du
+		<a
+			class="hover:text-gold text-white underline"
+			href=" https://discord-insoumis.fr/"
+			>Discord insoumis</a
+		>
 	</footer>
 </template>
 
