@@ -1,18 +1,24 @@
 <template>
 	<img
-		class="fixed top-0 object-cover w-full h-full"
-		:src="gradientUrl"
-		alt="gradient de fond"
-	/>
-	<img
+		src="@/assets/lol.jpg"
 		class="fixed bottom-0 object-cover w-full h-full"
+		alt=""
+	/>
+
+	<!-- <img
+		class="fixed bottom-0 object-cover w-full h-full opacity-60"
 		:src="blueOverlayUrl"
 		alt="éoliennes bleues"
-	/>
-	<img
-		class="fixed bottom-0 object-cover w-full h-full"
+	/> -->
+	<!-- <img
+		class="fixed bottom-0 object-cover w-full h-full opacity-60"
 		:src="yellowOverlayUrl"
 		alt="fusées jaunes"
+	/> -->
+	<img
+		class="fixed top-0 object-cover w-full h-full opacity-60"
+		:src="gradientUrl"
+		alt="gradient de fond"
 	/>
 </template>
 

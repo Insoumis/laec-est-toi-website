@@ -1,20 +1,22 @@
 <template>
 	<div
-		class="flex flex-col sm:w-4/12 w-full md:p-12 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
+		class="flex flex-col sm:w-4/12 w-screen md:px-12 md:py-8 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
 	>
-		<BlinkAnimation class="mx-auto w-96" />
+		<BlinkAnimation class="mx-auto h-14" />
 		<video controls poster="/preview.jpg">
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
-		<div class="flex flex-col items-center h-full">
-			<Button class="flex items-center space-x-4 font-draxel">
-				<IconPlay class="h-6 w-6 mr-4" />
-				<router-link to="/game">Jouer sur navigateur</router-link>
-			</Button>
+		<div class="flex flex-col items-center h-full w-full">
+			<a class="flex w-full pointer" href="/game">
+				<Button class="flex items-center font-draxel w-full h-full">
+					<IconPlay class="h-6 w-6 mr-6" />
+					<div class="w-full flex">Jouer sur navigateur</div>
+				</Button>
+			</a>
 			<Button class="hidden lg:block font-draxel"
 				><div class="flex space-x-4">
 					<a class="flex" :href="currDLLink">
-						<IconCommand class="h-6 w-6 mr-8" /> Telecharger</a
+						<IconCommand class="h-6 w-6 mr-6" />Telecharger</a
 					>
 					<div class="flex space-x-4 pl-4">
 						<a :href="`/dl/laec-est-vous-win64.zip`"
@@ -38,20 +40,29 @@
 					</div>
 				</div>
 			</Button>
-			<Button class="flex align-center space-x-4 font-draxel">
-				<IconArcade class="h-6 w-6 mr-4" />
-				<a>Jouer sur android</a>
-			</Button>
+			<a
+				class="flex w-full h-full"
+				href="/dl/LAEC-IS-YOU-1003/LAEC_IS_YOU.apk"
+			>
+				<Button class="flex align-center font-draxel">
+					<IconArcade class="h-6 w-6 mr-6" />
+					<div class="w-full flex">Jouer sur android</div>
+				</Button>
+			</a>
 		</div>
 		<p class="mx-2 text-xs text-center text-white">
-			Ce jeu vidéo est open-source et libre. Il a été développé à 100% par
-			des bénévoles du
-			<span class="underline">Discord insoumis</span> avec l'accord du
-			créateur de BABA IS YOU, que nous remercions et avec lequel nous ne
-			sommes pas affiliés.
+			Ce jeu vidéo est open-source et libre (sauf les musiques). Il a été
+			développé à 100% par des bénévoles du
+			<a
+				class="hover:text-gold underline"
+				href=" https://discord-insoumis.fr/"
+				>Discord insoumis</a
+			>
+			avec l'accord du créateur de BABA IS YOU, que nous remercions et
+			avec lequel nous ne sommes pas affiliés.
 		</p>
 		<div class="w-full h-full flex justify-center space-x-4">
-			<IconGodot /> <IconLibre />
+			<IconGodot class="w-6 h-6" /> <IconLibre class="w-6 h-6" />
 		</div>
 	</div>
 </template>
@@ -86,6 +97,8 @@ const getOs = () => {
 		os = "laec-est-vous-mac.zip";
 	} else if (windowsPlatforms.indexOf(platform) !== -1) {
 		os = "laec-est-vous-win64.zip";
+	} else if (/Android/.test(userAgent)) {
+		os = "LAEC-IS-YOU-1003/LAEC IS YOU.apk";
 	} else if (!os && /Linux/.test(platform)) {
 		os = "laec-est-vous_0-5-4_linux64.tar.gz";
 	}

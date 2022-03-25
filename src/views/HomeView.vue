@@ -1,5 +1,7 @@
 <template>
-	<main class="relative flex justify-center w-full sm:p-16 align-center">
+	<main
+		class="relative flex justify-center w-full h-screen sm:p-16 align-center"
+	>
 		<BackgroundImages />
 		<MainPresenter class="relative" />
 	</main>

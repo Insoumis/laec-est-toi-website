@@ -4,8 +4,11 @@
 		class="relative grid grid-cols-3 py-3 bg-black shadow-md"
 	>
 		<div class="flex items-center px-8">
-			<router-link class="shrink-0" to="/">
-				<IconLeave class="w-5 h-5 text-white hover:text-gold" />
+			<router-link
+				class="shrink-0 p-4 pointer text-white hover:text-gold"
+				to="/"
+			>
+				<IconLeave class="w-5 h-5" />
 			</router-link>
 			<a
 				class="hidden ml-16 md:inline-block"
