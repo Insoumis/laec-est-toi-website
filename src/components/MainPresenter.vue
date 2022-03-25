@@ -64,9 +64,9 @@
 	</div>
 </template>
 <script setup lang="ts">
+import { computed } from "vue";
 import Button from "./MainButton.vue";
 import BlinkAnimation from "./BlinkAnimation.vue";
-import { computed } from "vue";
 import IconMac from "./icon/IconMac.vue";
 import IconLinux from "./icon/IconLinux.vue";
 import IconWindow from "./icon/IconWindow.vue";
@@ -76,11 +76,10 @@ import IconArcade from "./icon/IconArcade.vue";
 import IconGodot from "./icon/IconGodot.vue";
 import IconLibre from "./icon/IconLibre.vue";
 
-const currDLLink = computed(
-	() => new URL(`/dl/${getOs() ? getOs() : "Windows"}`, import.meta.url).href
-);
+const currDLLink = computed(() => `/dl/${getOs() ? getOs() : "Windows"}`);
 
 const getOs = () => {
+	if (import.meta.env.SSR) return null;
 	var userAgent = window.navigator.userAgent,
 		platform =
 			window.navigator?.userAgentData?.platform ??

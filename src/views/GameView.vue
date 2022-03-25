@@ -34,12 +34,23 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref } from "vue";
+import { useHead } from "@vueuse/head";
+import { useElementBounding } from "@vueuse/core";
+
 import IconLeave from "@/components/icon/IconLeave.vue";
 import IconDiscordInsoumis from "@/components/icon/IconDiscordInsoumis.vue";
 import BlinkAnimation from "@/components/BlinkAnimation.vue";
 
-import { useElementBounding } from "@vueuse/core";
-import { computed, ref } from "vue";
+useHead({
+	title: "LAEC EST TOI",
+	meta: [
+		{
+			name: `description`,
+			content: `Changez les règles du jeu !`,
+		},
+	],
+});
 
 const gameContainer = ref<null | HTMLIFrameElement>(null);
 

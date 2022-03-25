@@ -3,11 +3,15 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite",
+		"dev:ssr": "node server",
 		"build": "vue-tsc --noEmit && vite build",
 		"build:nocheck": "vite build",
 		"preview": "vite preview --port 5050",
+		"serve": "cross-env NODE_ENV=production node server",
 		"typecheck": "vue-tsc --noEmit",
-		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+		"build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+		"generate": "vite build --ssrManifest --outDir dist/static && yarn build:server && node prerender"
 	},
 	"dependencies": {
 		"@vueuse/core": "^8.1.2",
@@ -22,11 +26,16 @@
 		"@vue/eslint-config-prettier": "^7.0.0",
 		"@vue/eslint-config-typescript": "^10.0.0",
 		"@vue/tsconfig": "^0.1.3",
+		"@vueuse/head": "^0.7.5",
 		"autoprefixer": "^10.4.4",
+		"compression": "^1.7.4",
+		"cross-env": "^7.0.3",
 		"eslint": "^8.5.0",
 		"eslint-plugin-vue": "^8.2.0",
+		"express": "^4.17.3",
 		"postcss": "^8.4.12",
 		"prettier": "^2.5.1",
+		"serve-static": "^1.15.0",
 		"tailwindcss": "^3.0.23",
 		"typescript": "~4.5.5",
 		"vite": "^2.8.4",

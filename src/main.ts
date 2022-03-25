@@ -1,13 +1,17 @@
-import { createApp } from "vue";
+// import { createApp } from "vue";
 import { createPinia } from "pinia";
+import { createSSRApp } from "vue";
+import { createHead } from "@vueuse/head";
 
 import App from "./App.vue";
-import router from "./router";
+import createRouter from "./router";
 import "./index.css";
 
-const app = createApp(App);
-
-app.use(createPinia());
-app.use(router);
-
-app.mount("#app");
+export const createApp = () => {
+	const app = createSSRApp(App);
+	const router = createRouter();
+	const head = createHead();
+	const pinia = createPinia();
+	app.use(router).use(head).use(pinia);
+	return { app, router };
+};
