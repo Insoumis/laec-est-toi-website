@@ -1,49 +1,45 @@
 <template>
 	<div
-		class="flex flex-col sm:w-4/12 w-screen md:px-12 md:py-8 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[450px]"
+		class="flex h-screen sm:h-auto flex-col sm:w-4/12 w-screen md:px-12 md:py-8 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[600px]"
 	>
 		<BlinkAnimation class="mx-auto h-14" />
 		<video controls poster="/preview.jpg">
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
-		<div class="flex flex-col items-center h-full w-full">
-			<a class="flex w-full pointer" href="/game">
-				<Button class="flex items-center font-draxel w-full h-full">
+		<div class="flex self-center flex-col items-start">
+			<router-link class="flex pointer" to="/game">
+				<Button class="flex items-center font-draxel h-full">
 					<IconPlay class="h-6 w-6 mr-6" />
 					<div class="w-full flex">Jouer sur navigateur</div>
 				</Button>
-			</a>
-			<Button class="hidden lg:block font-draxel"
-				><div class="flex space-x-4">
+			</router-link>
+			<Button class="hidden lg:block font-draxel">
+				<div class="flex space-x-4">
 					<a class="flex" :href="currDLLink">
-						<IconCommand class="h-6 w-6 mr-6" />Telecharger</a
-					>
+						<IconCommand class="h-6 w-6 mr-6" />
+						Telecharger
+					</a>
 					<div class="flex space-x-4 pl-4">
-						<a :href="`/dl/laec-est-vous-win64.zip`"
-							><IconWindow
+						<a :href="`/dl/laec-est-vous-win64.zip`">
+							<IconWindow
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
 						</a>
 
-						<a
-							:href="`/dl/laec-est-vous_0-5-4_linux64.tar.gz
-						`"
-							><IconLinux
+						<a :href="`/dl/laec-est-vous_0-5-4_linux64.tar.gz`">
+							<IconLinux
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
 						</a>
-						<a :href="`/dl/laec-est-vous-mac.zip`"
-							><IconMac
+						<a :href="`/dl/laec-est-vous-mac.zip`">
+							<IconMac
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
 						</a>
 					</div>
 				</div>
 			</Button>
-			<a
-				class="flex w-full h-full"
-				href="/dl/LAEC-IS-YOU-1003/LAEC_IS_YOU.apk"
-			>
+			<a class="flex" href="/dl/LAEC-IS-YOU-1003/LAEC_IS_YOU.apk">
 				<Button class="flex align-center font-draxel">
 					<IconArcade class="h-6 w-6 mr-6" />
 					<div class="w-full flex">Jouer sur android</div>
