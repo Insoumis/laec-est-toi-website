@@ -8,7 +8,7 @@
 	<img
 		aria-hidden="true"
 		class="fixed top-0 object-cover w-full h-full opacity-60"
-		src="@/assets/calques/0_gradient.png"
+		src="@/assets/calques/0_gradient.jpg"
 		alt="gradient de fond"
 	/>
 </template>
