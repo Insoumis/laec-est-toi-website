@@ -17,18 +17,20 @@
 						<IconCommand class="h-6 w-6 mr-8" /> Telecharger</a
 					>
 					<div class="flex space-x-4 pl-4">
-						<a :href="`/dl/Windows`"
+						<a :href="`/dl/laec-est-vous-win64.zip`"
 							><IconWindow
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
 						</a>
 
-						<a :href="`/dl/Linux`"
+						<a
+							:href="`/dl/laec-est-vous_0-5-4_linux64.tar.gz
+						`"
 							><IconLinux
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
 						</a>
-						<a :href="`/dl/MacOS`"
+						<a :href="`/dl/laec-est-vous-mac.zip`"
 							><IconMac
 								class="w-6 h-6 text-white hover:text-gold"
 							/>
@@ -81,11 +83,11 @@ const getOs = () => {
 		os = null;
 
 	if (macosPlatforms.indexOf(platform) !== -1) {
-		os = "MacOS";
+		os = "laec-est-vous-mac.zip";
 	} else if (windowsPlatforms.indexOf(platform) !== -1) {
-		os = "Windows";
+		os = "laec-est-vous-win64.zip";
 	} else if (!os && /Linux/.test(platform)) {
-		os = "Linux";
+		os = "laec-est-vous_0-5-4_linux64.tar.gz";
 	}
 
 	return os;
