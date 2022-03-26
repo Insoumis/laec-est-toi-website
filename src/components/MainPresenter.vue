@@ -18,7 +18,7 @@
 					<a
 						class="flex"
 						aria-hidden="true"
-						:class="{ 'cursor-default': currDLLink }"
+						:class="{ 'cursor-default': !currDLLink }"
 						:href="currDLLink ?? '#'"
 					>
 						<IconCommand class="h-6 w-6 mr-6" />
