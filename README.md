@@ -23,7 +23,7 @@ Site web pour le jeu [LAEC EST TOI](https://github.com/Insoumis/laec-est-toi)
 ### Autres
 - [Yarn](https://classic.yarnpkg.com/)
 - [Docker](https://www.docker.com/)
-- [Matomo](https://matomo.org/)
+
 
 On fait pas de tests parce qu'on est des dingues.
 
