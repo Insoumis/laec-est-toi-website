@@ -20,6 +20,7 @@
 						aria-hidden="true"
 						:class="{ 'cursor-default': !currDLLink }"
 						:href="currDLLink ?? '#'"
+						download
 					>
 						<IconCommand class="h-6 w-6 mr-6" />
 						Telecharger
@@ -28,6 +29,7 @@
 						<a
 							aria-label="Telecharger pour Windows"
 							:href="WINDOWS_URL"
+							download
 						>
 							<IconWindow
 								aria-label="icone windows"
@@ -38,6 +40,7 @@
 						<a
 							aria-label="Telecharger pour linux"
 							:href="LINUX_URL"
+							download
 						>
 							<IconLinux
 								aria-label="icone Linux"
@@ -47,6 +50,7 @@
 						<a
 							aria-label="Telecharger pour MacOs"
 							:href="MACOS_URL"
+							download
 						>
 							<IconMac
 								aria-label="icone Mac"
@@ -56,7 +60,7 @@
 					</div>
 				</div>
 			</Button>
-			<a class="flex" :href="ANDROID_URL">
+			<a class="flex" :href="ANDROID_URL" download>
 				<Button class="flex align-center font-draxel">
 					<IconArcade aria-hidden="true" class="h-6 w-6 mr-6" />
 					<div class="w-full flex">Jouer sur android</div>
