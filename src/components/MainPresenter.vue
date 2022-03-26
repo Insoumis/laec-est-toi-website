@@ -82,14 +82,24 @@
 			</router-link>
 		</p>
 		<div class="w-full h-full flex justify-center space-x-4">
-			<IconGodot
-				aria-hidden="true"
-				class="w-6 h-6 text-[#BBB] hover:text-white"
-			/>
-			<IconLibre
-				aria-hidden="true"
-				class="w-6 h-6 text-[#BBB] hover:text-white"
-			/>
+			<a
+				aria-label="lien du moteur du jeu"
+				href="https://godotengine.org/"
+			>
+				<IconGodot
+					aria-label="icone de Godot, le moteur du jeu"
+					class="w-6 h-6 text-[#BBB] hover:text-gold"
+				/>
+			</a>
+			<a
+				href="https://github.com/Insoumis/laec-est-toi"
+				aria-label="lien du projet open source"
+			>
+				<IconLibre
+					aria-label="icone open source"
+					class="w-6 h-6 text-[#BBB] hover:text-gold"
+				/>
+			</a>
 		</div>
 	</div>
 </template>
