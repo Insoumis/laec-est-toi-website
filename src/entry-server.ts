@@ -1,7 +1,7 @@
 import { createApp } from "./main";
 import { renderToString } from "vue/server-renderer";
 import { renderHeadToString } from "@vueuse/head";
-import path, { basename } from "path";
+import { basename } from "path";
 
 export async function render(
 	url: string,

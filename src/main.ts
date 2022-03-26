@@ -1,5 +1,3 @@
-// import { createApp } from "vue";
-import { createPinia } from "pinia";
 import { createSSRApp } from "vue";
 import { createHead } from "@vueuse/head";
 
@@ -11,7 +9,6 @@ export const createApp = () => {
 	const app = createSSRApp(App);
 	const router = createRouter();
 	const head = createHead();
-	const pinia = createPinia();
-	app.use(router).use(head).use(pinia);
+	app.use(router).use(head);
 	return { app, router, head };
 };

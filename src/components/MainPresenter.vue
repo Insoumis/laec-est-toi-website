@@ -123,24 +123,17 @@ const ANDROID_URL = import.meta.env.VITE_GAME_URL_ANDROID as string;
 
 const getOs = () => {
 	if (import.meta.env.SSR) return null;
-	var userAgent = window.navigator.userAgent,
-		platform =
-			window.navigator?.userAgentData?.platform ??
-			window.navigator.platform,
-		macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
-		windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
-		iosPlatforms = ["iPhone", "iPad", "iPod"],
-		os = null;
 
-	if (macosPlatforms.indexOf(platform) !== -1) {
-		os = MACOS_URL;
-	} else if (windowsPlatforms.indexOf(platform) !== -1) {
-		os = WINDOWS_URL;
-	} else if (!os && /Linux/.test(platform)) {
-		os = LINUX_URL;
-	}
+	const platform =
+		window.navigator?.userAgentData?.platform ?? window.navigator.platform;
+	const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
+	const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
 
-	return os;
+	if (macosPlatforms.indexOf(platform) !== -1) return MACOS_URL;
+	if (windowsPlatforms.indexOf(platform) !== -1) return WINDOWS_URL;
+	if (/Linux/.test(platform)) return LINUX_URL;
+
+	return null;
 };
 
 const currDLLink = ref<string | null>("");
