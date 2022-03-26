@@ -18,6 +18,4 @@ COPY src src
 COPY \.env .
 RUN yarn generate
 
-COPY dist/static dist/static
-
 CMD yarn serve
