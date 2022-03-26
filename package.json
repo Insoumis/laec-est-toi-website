@@ -19,6 +19,7 @@
 		"@vueuse/core": "^8.1.2",
 		"pinia": "^2.0.11",
 		"vue": "^3.2.31",
+		"vue-matomo": "^4.1.0",
 		"vue-router": "^4.0.12"
 	},
 	"devDependencies": {
