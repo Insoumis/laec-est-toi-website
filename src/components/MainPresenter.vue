@@ -16,7 +16,6 @@
 			<Button class="hidden lg:block font-draxel">
 				<div class="flex space-x-4">
 					<a
-						:class="{ 'cursor-default': currDLLink }"
 						class="flex"
 						aria-hidden="true"
 						:href="currDLLink ?? '#'"
