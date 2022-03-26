@@ -57,6 +57,13 @@
 					<div class="w-full flex">Jouer sur android</div>
 				</Button>
 			</a>
+
+			<router-link class="flex pointer" to="/credits">
+				<Button class="flex items-center font-draxel h-full">
+					<IconPlay aria-hidden="true" class="h-6 w-6 mr-6" />
+					<div class="w-full flex">Credits</div>
+				</Button>
+			</router-link>
 		</div>
 		<p aria-label="Credits" class="mx-2 text-sm text-center text-[#BBB]">
 			Ce jeu vidéo est open-source et libre (sauf les musiques). Il a été

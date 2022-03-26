@@ -5,6 +5,7 @@ import {
 } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import GameView from "../views/GameView.vue";
+import Credits from "@/views/Credits.vue";
 import NotFoundView from "../views/NotFoundView.vue";
 
 export const routes = [
@@ -17,6 +18,11 @@ export const routes = [
 		path: "/game",
 		name: "game",
 		component: GameView,
+	},
+	{
+		path: "/credits",
+		name: "credits",
+		component: Credits,
 	},
 	{
 		path: "/:pathMatch(.*)*",
