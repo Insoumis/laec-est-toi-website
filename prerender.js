@@ -25,7 +25,7 @@ const routesToPrerender = fs
 			await render(url, manifest);
 
 		const html = template
-			.replace(`<html lang="fr">`, `<htm lang="fr"${htmlAttrs}>`)
+			.replace(`<html lang="fr">`, `<html lang="fr"${htmlAttrs}>`)
 			.replace(`<!--head-tags-->`, headTags)
 			.replace(`<!--preload-links-->`, preloadLinks)
 			.replace(`<body>`, `<body${bodyAttrs}>`)

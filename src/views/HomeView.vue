@@ -10,17 +10,20 @@ import BackgroundImages from "@/components/BackgroundImages.vue";
 import MainPresenter from "@/components/MainPresenter.vue";
 import { useHead } from "@vueuse/head";
 
+const pageTitle = "LAEC EST TOI";
+const pageDescription = `Changez les règles du jeu !`;
+
 useHead({
-	title: "LAEC EST TOI",
+	title: pageTitle,
 	meta: [
 		{
 			name: `description`,
 			content: `Changez les règles du jeu !`,
 		},
-		// Facebook meta tags
+		// OpenGraph meta tags
 		{
 			name: `og:url`,
-			content: `https://www.laec-est-toi.fr`,
+			content: import.meta.env.VITE_WEBSITE_URL,
 		},
 		{
 			name: `og:type`,
@@ -28,15 +31,15 @@ useHead({
 		},
 		{
 			name: `og:title`,
-			content: `LAEC EST TOI`,
+			content: pageTitle,
 		},
 		{
 			name: `og:description`,
-			content: `Changez les règles du jeu !`,
+			content: pageDescription,
 		},
 		{
 			name: "og:image",
-			content: `/preview.jpg`,
+			content: import.meta.env.VITE_PREVIEW_IMG_URL,
 		},
 		// Twitter meta tags
 		{
@@ -45,23 +48,23 @@ useHead({
 		},
 		{
 			property: "twitter:domain",
-			content: `laec-est-toi.fr`,
+			content: import.meta.env.VITE_WEBSITE_DOMAIN,
 		},
 		{
 			property: "twitter:url",
-			content: `https://www.laec-est-toi.fr`,
+			content: import.meta.env.VITE_WEBSITE_URL,
 		},
 		{
 			name: "twitter:title",
-			content: `LAEC EST TOI`,
+			content: pageTitle,
 		},
 		{
 			name: "twitter:description",
-			content: `Changez les règles du jeu !`,
+			content: pageDescription,
 		},
 		{
 			name: "twitter:image",
-			content: `/preview.jpg`,
+			content: import.meta.env.VITE_PREVIEW_IMG_URL,
 		},
 	],
 });
