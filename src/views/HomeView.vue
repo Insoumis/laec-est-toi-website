@@ -17,6 +17,52 @@ useHead({
 			name: `description`,
 			content: `Changez les règles du jeu !`,
 		},
+		// Facebook meta tags
+		{
+			name: `og:url`,
+			content: `https://www.laec-est-toi.fr`,
+		},
+		{
+			name: `og:type`,
+			content: `website`,
+		},
+		{
+			name: `og:title`,
+			content: `LAEC EST TOI`,
+		},
+		{
+			name: `og:description`,
+			content: `Changez les règles du jeu !`,
+		},
+		{
+			name: "og:image",
+			content: `/preview.jpg`,
+		},
+		// Twitter meta tags
+		{
+			name: "twitter:card",
+			content: `summary_large_image`,
+		},
+		{
+			property: "twitter:domain",
+			content: `laec-est-toi.fr`,
+		},
+		{
+			property: "twitter:url",
+			content: `https://www.laec-est-toi.fr`,
+		},
+		{
+			name: "twitter:title",
+			content: `LAEC EST TOI`,
+		},
+		{
+			name: "twitter:description",
+			content: `Changez les règles du jeu !`,
+		},
+		{
+			name: "twitter:image",
+			content: `/preview.jpg`,
+		},
 	],
 });
 </script>

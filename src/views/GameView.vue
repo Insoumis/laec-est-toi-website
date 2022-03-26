@@ -30,8 +30,13 @@ import MainHeader from "@/components/MainHeader.vue";
 
 const HTML_URL = import.meta.env.VITE_GAME_URL_HTML as string;
 
+const { width, height } = useWindowSize();
+
+const currRatio = computed(() => width.value / height.value);
+const shouldShow = computed(() => currRatio.value < 1 || height.value > 600);
+
 useHead({
-	title: "LAEC EST TOI",
+	title: "LAEC EST TOI - Jeu",
 	meta: [
 		{
 			name: `description`,
@@ -39,9 +44,4 @@ useHead({
 		},
 	],
 });
-
-const { width, height } = useWindowSize();
-
-const currRatio = computed(() => width.value / height.value);
-const shouldShow = computed(() => currRatio.value < 1 || height.value > 600);
 </script>

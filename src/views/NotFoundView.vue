@@ -31,4 +31,16 @@
 </template>
 <script setup lang="ts">
 import BackgroundImages from "../components/BackgroundImages.vue";
+
+import { useHead } from "@vueuse/head";
+
+useHead({
+	title: "LAEC EST TOI - 404",
+	meta: [
+		{
+			name: `description`,
+			content: `Changez les règles du jeu !`,
+		},
+	],
+});
 </script>
