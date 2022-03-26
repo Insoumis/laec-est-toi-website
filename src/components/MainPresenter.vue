@@ -57,13 +57,6 @@
 					<div class="w-full flex">Jouer sur android</div>
 				</Button>
 			</a>
-
-			<router-link class="flex pointer" to="/credits">
-				<Button class="flex items-center font-draxel h-full">
-					<IconPlay aria-hidden="true" class="h-6 w-6 mr-6" />
-					<div class="w-full flex">Credits</div>
-				</Button>
-			</router-link>
 		</div>
 		<p aria-label="Credits" class="mx-2 text-sm text-center text-[#BBB]">
 			Ce jeu vidéo est open-source et libre (sauf les musiques). Il a été
@@ -75,6 +68,13 @@
 			>
 			avec l'accord du créateur de BABA IS YOU, que nous remercions et
 			avec lequel nous ne sommes pas affiliés.
+
+			<router-link
+				class="flex pointer justify-center mt-2 hover:text-gold"
+				to="/credits"
+			>
+				Credits du jeu
+			</router-link>
 		</p>
 		<div class="w-full h-full flex justify-center space-x-4">
 			<IconGodot
