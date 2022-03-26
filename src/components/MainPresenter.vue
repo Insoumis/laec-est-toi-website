@@ -78,7 +78,7 @@
 				class="flex pointer justify-center mt-2 hover:text-gold"
 				to="/credits"
 			>
-				Credits du jeu
+				Crédits du jeu
 			</router-link>
 		</p>
 		<div class="w-full h-full flex justify-center space-x-4">

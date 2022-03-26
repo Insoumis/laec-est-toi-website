@@ -7,27 +7,29 @@
 		class="relative flex justify-center my-auto w-full sm:p-16 align-center"
 	>
 		<div
-			class="flex font-sofia relative flex-col sm:w-5/12 w-screen md:px-16 md:py-12 p-8 border border-black shadow-2xl bg-main-grey sm:rounded-2xl sm:min-w-[450px] text-white"
+			class="flex font-sofia relative flex-col sm:w-4/12 w-screen md:px-16 md:py-12 border border-black shadow-2xl bg-main-grey sm:rounded-2xl sm:min-w-[600px] text-white"
 		>
 			<div class="text-6xl font-draxel text-center">Remerciements</div>
-			<div class="text-center text-2xl space-y-4 mt-6 flex flex-col">
-				<div class="italic font-sofia m-4">
+			<div class="text-center text-xl space-y-4 mt-6 flex flex-col">
+				<div class="italic font-sofia m-4 text-white">
 					D'après une idee de Trollune et Fanelia
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">DEVELOPPEURS</div>
+					<div class="text-2xl mt-2 text-gold">DEVELOPPEURS</div>
 					<div>Adrenesis</div>
 					<div>Trollune</div>
 					<div>Roipoussiere</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">DEVELOPPEURS D'OUTILS</div>
+					<div class="text-2xl mt-2 text-gold">
+						DEVELOPPEURS D'OUTILS
+					</div>
 
 					<div>Adrenesis</div>
 					<div>Trollune</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">GRAPHISTES</div>
+					<div class="text-2xl mt-2 text-gold">GRAPHISTES</div>
 
 					<div>Lametyste</div>
 					<div>Niwatori</div>
@@ -40,29 +42,35 @@
 					<div>Manda G</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">ARTISTES TECHNIQUE</div>
+					<div class="text-2xl mt-2 text-gold">
+						ARTISTES TECHNIQUE
+					</div>
 
 					<div>Adrenesis</div>
 					<div>Trollune</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">COMPOSITION MUSICALE</div>
+					<div class="text-2xl mt-2 text-gold">
+						COMPOSITION MUSICALE
+					</div>
 
 					<div>Precheurius Studio CK Project</div>
 					<div>AlphaXIII Studio CK Project</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">PERFORMANCE MUSICALE</div>
+					<div class="text-2xl mt-2 text-gold">
+						PERFORMANCE MUSICALE
+					</div>
 
 					<div>Precheurius Studio CK Project</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">BRUITAGES</div>
+					<div class="text-2xl mt-2 text-gold">BRUITAGES</div>
 
 					<div>Wilfried</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">CONCEPTS DE JEU</div>
+					<div class="text-2xl mt-2 text-gold">CONCEPTS DE JEU</div>
 
 					<div>Trollune</div>
 					<div>Cyril M.</div>
@@ -71,7 +79,9 @@
 					<div>IvanC</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">CONCEPTION DE NIVEAU</div>
+					<div class="text-2xl mt-2 text-gold">
+						CONCEPTION DE NIVEAU
+					</div>
 
 					<div>Miidnight</div>
 					<div>Trollune</div>
@@ -85,21 +95,21 @@
 				</div>
 
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">ORGANISATION</div>
+					<div class="text-2xl mt-2 text-gold">ORGANISATION</div>
 
 					<div>Miidnight</div>
 					<div>Precheurius Studio CK Project</div>
 				</div>
 
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">WEBSITE</div>
+					<div class="text-2xl mt-2 text-gold">WEBSITE</div>
 
 					<div>Aikru</div>
 					<div>Nate Lafeuille</div>
 				</div>
 
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">TRAILER</div>
+					<div class="text-2xl mt-2 text-gold">TRAILER</div>
 
 					<div>Zegueux</div>
 					<div>Precheurius Studio CK Project</div>
@@ -109,12 +119,12 @@
 				</div>
 
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">VERIFICATION</div>
+					<div class="text-2xl mt-2 text-gold">VERIFICATION</div>
 
 					<div>Koten</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">TESTEUR⋅ES</div>
+					<div class="text-2xl mt-2 text-gold">TESTEUR⋅ES</div>
 
 					<div>DanLo</div>
 					<div>NightGlow</div>
@@ -126,7 +136,7 @@
 				</div>
 
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">COMMUNICATION</div>
+					<div class="text-2xl mt-2 text-gold">COMMUNICATION</div>
 
 					<div>Dazo</div>
 					<div>Miidnight</div>
@@ -136,7 +146,7 @@
 				</div>
 
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">REMERCIEMENTS</div>
+					<div class="text-2xl mt-2 text-gold">REMERCIEMENTS</div>
 
 					<div>Delphou</div>
 					<div>Fanélia</div>
@@ -150,7 +160,9 @@
 					<div>Sno</div>
 				</div>
 				<div class="font-draxel">
-					<div class="text-3xl mt-2">REMERCIEMENTS SPECIAUX</div>
+					<div class="text-2xl mt-2 text-gold">
+						REMERCIEMENTS SPECIAUX
+					</div>
 
 					<div>BABA IS YOU</div>
 					<div>Kenney</div>
