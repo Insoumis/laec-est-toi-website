@@ -12,7 +12,8 @@
 			<div class="text-6xl font-draxel text-center">Remerciements</div>
 			<div class="text-center text-xl space-y-4 mt-6 flex flex-col">
 				<div class="italic font-sofia m-4 text-white">
-					D'après une idee de Trollune et Fanelia
+					À tous les insoumis qui oeuvrent quotidiennement pour
+					changer les règles du jeu
 				</div>
 				<div class="font-draxel">
 					<div class="text-2xl mt-2 text-gold">DEVELOPPEURS</div>
@@ -131,7 +132,7 @@
 					<div>JeanSebastienBachOfficiel</div>
 					<div>SpyBob</div>
 					<div>anthony</div>
-					<div>Matteo & Gianni</div>
+					<div>Matteo et Gianni</div>
 					<div>Saccharose4965</div>
 				</div>
 
@@ -149,7 +150,7 @@
 					<div class="text-2xl mt-2 text-gold">REMERCIEMENTS</div>
 
 					<div>Delphou</div>
-					<div>Fanélia</div>
+					<div>Fanelia</div>
 					<div>Karibou</div>
 					<div>Ista</div>
 					<div>NightGlow</div>
