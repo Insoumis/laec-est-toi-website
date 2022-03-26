@@ -1,46 +1,77 @@
 # laec-est-toi-website
 
-This template should help get you started developing with Vue 3 in Vite.
+Site web pour le jeu [LAEC EST TOI](https://github.com/Insoumis/laec-est-toi)
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+[![Visualization of the codebase](./diagram.svg)](https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=Insoumis%2Flaec-est-toi-website)
+ 
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Technos utilisés
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+### JS
+- [TypeScript](https://www.typescriptlang.org/)
+- [VueJS](https://vuejs.org/)
+#### Librairies VueJS
+- [Vue Router](https://router.vuejs.org/)
+- [VueUse](https://vueuse.org/)
+### CSS
+- [Tailwind CSS](https://tailwindcss.com/)
+### Qualité du code
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+### Autres
+- [Yarn](https://classic.yarnpkg.com/)
+- [Docker](https://www.docker.com/)
+- [Matomo](https://matomo.org/)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+On fait pas de tests parce qu'on est des dingues.
 
-## Customize configuration
+## Lancer le site en local
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+Clonez le repo, puis installez les dépendances en local avec `yarn`
 ```sh
-npm install
+git clone https://github.com/Insoumis/laec-est-toi-website.git
+cd laec-est-toi-website
+yarn
 ```
 
-### Compile and Hot-Reload for Development
+Vous pouvez maintenant lancer le site de différentes manières :
 
+### Lancer simplement (SPA) le site en mode dev avec du hot reload
 ```sh
-npm run dev
+yarn dev
 ```
-
-### Type-Check, Compile and Minify for Production
-
+### Lancer avec le SSR le site en mode dev avec du hot reload
 ```sh
-npm run build
+yarn dev:ssr
 ```
+### Build avec Docker et lancer le site en mode prod (SSG)
+```sh
+yarn docker:build
+yarn docker:run
+```
+### Build avec `docker-compose` et lancer le site en mode prod (SSG)
+```sh
+docker-compose build
+docker-compose up   
+```
+(Il se peut que le cache ne se clear pas bien entre deux builds, donc n'hésitez pas à remove l'ancienne image complètement avant de rebuild)
 
-### Lint with [ESLint](https://eslint.org/)
+### Linter le projet avec ESLint
 
 ```sh
 npm run lint
 ```
+
+## À propos du `.env`
+
+Le `.env`contient le lien vers tous les fichiers téléchargeables (ex: `VITE_GAME_URL_WINDOWS`), ainsi que des valeurs utiles pour générer les tags `<meta />` qui permettent de prévisualiser le lien du site quand il est posté sur les réseaux sociaux. Il suffit donc de changer la valeur de ces variables et de rebuild le site pour que les téléchargements se mettent à jour. 🐢
+
+## Recommendations pour l'IDE + plugins
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+
+## Remerciements
+
+À tous les insoumis qui oeuvrent quotidiennement pour changer les règles du jeu
