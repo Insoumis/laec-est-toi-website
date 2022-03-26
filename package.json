@@ -11,7 +11,9 @@
 		"typecheck": "vue-tsc --noEmit",
 		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
 		"build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
-		"generate": "vite build --ssrManifest --outDir dist/static && yarn build:server && node prerender"
+		"generate": "vite build --ssrManifest --outDir dist/static && yarn build:server && node prerender",
+		"docker:build": "docker build -t laec-est-toi-website .",
+		"docker:run": "docker run -p 3000:3000 laec-est-toi-website"
 	},
 	"dependencies": {
 		"@vueuse/core": "^8.1.2",
