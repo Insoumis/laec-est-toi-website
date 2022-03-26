@@ -15,14 +15,19 @@
 			</router-link>
 			<Button class="hidden lg:block font-draxel">
 				<div class="flex space-x-4">
-					<a class="flex" aria-hidden="true" :href="currDLLink">
+					<a
+						:class="{ 'cursor-default': currDLLink }"
+						class="flex"
+						aria-hidden="true"
+						:href="currDLLink ?? '#'"
+					>
 						<IconCommand class="h-6 w-6 mr-6" />
 						Telecharger
 					</a>
 					<div class="flex space-x-4 pl-4">
 						<a
 							aria-label="Telecharger pour Windows"
-							:href="`/dl/laec-est-vous-win64.zip`"
+							:href="WINDOWS_URL"
 						>
 							<IconWindow
 								aria-label="icone windows"
@@ -32,7 +37,7 @@
 
 						<a
 							aria-label="Telecharger pour linux"
-							:href="`/dl/laec-est-vous_0-5-6_linux64.tar.gz`"
+							:href="LINUX_URL"
 						>
 							<IconLinux
 								aria-label="icone Linux"
@@ -41,7 +46,7 @@
 						</a>
 						<a
 							aria-label="Telecharger pour MacOs"
-							:href="`/dl/laec-est-vous.zip`"
+							:href="MACOS_URL"
 						>
 							<IconMac
 								aria-label="icone Mac"
@@ -51,7 +56,7 @@
 					</div>
 				</div>
 			</Button>
-			<a class="flex" href="/dl/LAEC-IS-YOU-1003/LAEC_IS_YOU.apk">
+			<a class="flex" :href="ANDROID_URL">
 				<Button class="flex align-center font-draxel">
 					<IconArcade aria-hidden="true" class="h-6 w-6 mr-6" />
 					<div class="w-full flex">Jouer sur android</div>
@@ -94,6 +99,11 @@ import IconArcade from "./icon/IconArcade.vue";
 import IconGodot from "./icon/IconGodot.vue";
 import IconLibre from "./icon/IconLibre.vue";
 
+const MACOS_URL = import.meta.env.VITE_GAME_URL_MACOS as string;
+const WINDOWS_URL = import.meta.env.VITE_GAME_URL_WINDOWS as string;
+const LINUX_URL = import.meta.env.VITE_GAME_URL_LINUX as string;
+const ANDROID_URL = import.meta.env.VITE_GAME_URL_ANDROID as string;
+
 const getOs = () => {
 	if (import.meta.env.SSR) return null;
 	var userAgent = window.navigator.userAgent,
@@ -106,17 +116,17 @@ const getOs = () => {
 		os = null;
 
 	if (macosPlatforms.indexOf(platform) !== -1) {
-		os = "laec-est-vous.zip";
+		os = MACOS_URL;
 	} else if (windowsPlatforms.indexOf(platform) !== -1) {
-		os = "laec-est-vous-win64.zip";
+		os = WINDOWS_URL;
 	} else if (!os && /Linux/.test(platform)) {
-		os = "laec-est-vous_0-5-6_linux64.tar.gz";
+		os = LINUX_URL;
 	}
 
 	return os;
 };
 
-const currDLLink = ref("");
+const currDLLink = ref<string | null>("");
 
-onMounted(() => (currDLLink.value = `/dl/${getOs() ? getOs() : "Windows"}`));
+onMounted(() => (currDLLink.value = getOs() ? getOs() : null));
 </script>

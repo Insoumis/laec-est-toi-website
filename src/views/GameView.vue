@@ -4,11 +4,7 @@
 		aria-label="container du jeu L'AEC est toi'"
 		class="relative flex justify-center flex-1 w-full bg-main-grey align-center"
 	>
-		<iframe
-			aria-label="jeu L'AEC"
-			class="grow"
-			src="/laec-est-vous_0-5-6_html5/index.html"
-		/>
+		<iframe aria-label="jeu L'AEC" class="grow" :src="HTML_URL" />
 	</main>
 	<footer
 		aria-label="credits"
@@ -18,7 +14,7 @@
 		Jeu développé par des bénévoles du
 		<a
 			class="hover:text-gold text-white underline"
-			href=" https://discord-insoumis.fr/"
+			href="https://discord-insoumis.fr/"
 		>
 			Discord insoumis
 		</a>
@@ -31,6 +27,8 @@ import { useHead } from "@vueuse/head";
 import { useWindowSize } from "@vueuse/core";
 
 import MainHeader from "@/components/MainHeader.vue";
+
+const HTML_URL = import.meta.env.VITE_GAME_URL_HTML as string;
 
 useHead({
 	title: "LAEC EST TOI",
