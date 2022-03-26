@@ -13,5 +13,5 @@ export const createApp = () => {
 	const head = createHead();
 	const pinia = createPinia();
 	app.use(router).use(head).use(pinia);
-	return { app, router };
+	return { app, router, head };
 };

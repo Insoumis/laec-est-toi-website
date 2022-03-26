@@ -30,18 +30,67 @@ import MainHeader from "@/components/MainHeader.vue";
 
 const HTML_URL = import.meta.env.VITE_GAME_URL_HTML as string;
 
+const { width, height } = useWindowSize();
+
+const currRatio = computed(() => width.value / height.value);
+const shouldShow = computed(() => currRatio.value < 1 || height.value > 600);
+
+const pageTitle = "LAEC EST TOI - Jeu";
+const pageDescription = `Changez les règles du jeu !`;
+
 useHead({
-	title: "LAEC EST TOI",
+	title: pageTitle,
 	meta: [
 		{
 			name: `description`,
 			content: `Changez les règles du jeu !`,
 		},
+		// OpenGraph meta tags
+		{
+			name: `og:url`,
+			content: import.meta.env.VITE_WEBSITE_URL,
+		},
+		{
+			name: `og:type`,
+			content: `website`,
+		},
+		{
+			name: `og:title`,
+			content: pageTitle,
+		},
+		{
+			name: `og:description`,
+			content: pageDescription,
+		},
+		{
+			name: "og:image",
+			content: import.meta.env.VITE_PREVIEW_IMG_URL,
+		},
+		// Twitter meta tags
+		{
+			name: "twitter:card",
+			content: `summary_large_image`,
+		},
+		{
+			property: "twitter:domain",
+			content: import.meta.env.VITE_WEBSITE_DOMAIN,
+		},
+		{
+			property: "twitter:url",
+			content: import.meta.env.VITE_WEBSITE_URL,
+		},
+		{
+			name: "twitter:title",
+			content: pageTitle,
+		},
+		{
+			name: "twitter:description",
+			content: pageDescription,
+		},
+		{
+			name: "twitter:image",
+			content: import.meta.env.VITE_PREVIEW_IMG_URL,
+		},
 	],
 });
-
-const { width, height } = useWindowSize();
-
-const currRatio = computed(() => width.value / height.value);
-const shouldShow = computed(() => currRatio.value < 1 || height.value > 600);
 </script>
