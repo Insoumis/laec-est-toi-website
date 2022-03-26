@@ -59,7 +59,25 @@ async function createServer(
 				render = (await vite.ssrLoadModule("/src/entry-server.ts"))
 					.render;
 			} else {
-				template = indexProd;
+				try {
+					template =
+						url === "/"
+							? indexProd
+							: fs.readFileSync(
+									resolve(
+										`dist/static/${url.replace(
+											"/",
+											""
+										)}.html`
+									),
+									"utf-8"
+							  );
+				} catch (error) {
+					template = fs.readFileSync(
+						resolve("dist/static/notfound.html"),
+						"utf-8"
+					);
+				}
 				render = require("./dist/server/entry-server.js").render;
 			}
 
