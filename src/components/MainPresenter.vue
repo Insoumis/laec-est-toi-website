@@ -72,6 +72,13 @@
 			>
 			avec l'accord du créateur de BABA IS YOU, que nous remercions et
 			avec lequel nous ne sommes pas affiliés.
+
+			<router-link
+				class="flex pointer justify-center mt-2 hover:text-gold"
+				to="/credits"
+			>
+				Credits du jeu
+			</router-link>
 		</p>
 		<div class="w-full h-full flex justify-center space-x-4">
 			<IconGodot
