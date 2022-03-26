@@ -1,29 +1,5 @@
 <template>
-	<header
-		v-if="currRatio < 1 || height > 600"
-		aria-label="Header"
-		class="relative grid grid-cols-3 py-3 bg-black shadow-md"
-	>
-		<div aria-label="barre de navigation" class="flex items-center px-8">
-			<router-link
-				aria-label="retour a la page d'accueil"
-				class="shrink-0 p-4 pointer text-white hover:text-gold"
-				to="/"
-			>
-				<IconLeave aria-hidden="true" class="w-5 h-5" />
-			</router-link>
-			<a
-				aria-label="Lien vers le Discord Insoumis"
-				class="hidden ml-16 lg:inline-block"
-				href="https://discord-insoumis.fr/"
-			>
-				<IconDiscordInsoumis
-					aria-hidden="true"
-					class="text-white w-36 hover:text-gold"
-			/></a>
-		</div>
-		<BlinkAnimation aria-hidden="true" class="m-auto w-80" />
-	</header>
+	<MainHeader :should-show="shouldShow" />
 	<main
 		aria-label="container du jeu L'AEC est toi'"
 		class="relative flex justify-center flex-1 w-full bg-main-grey align-center"
@@ -31,20 +7,21 @@
 		<iframe
 			aria-label="jeu L'AEC"
 			class="grow"
-			src="/laec-est-vous_0-5-6_html5/index"
+			src="/laec-est-vous_0-5-6_html5/index.html"
 		/>
 	</main>
 	<footer
 		aria-label="credits"
-		v-if="currRatio < 1 || height > 600"
+		v-if="shouldShow"
 		class="py-5 text-center text-white bg-black shadow-md"
 	>
 		Jeu développé par des bénévoles du
 		<a
 			class="hover:text-gold text-white underline"
 			href=" https://discord-insoumis.fr/"
-			>Discord insoumis</a
 		>
+			Discord insoumis
+		</a>
 	</footer>
 </template>
 
@@ -53,9 +30,7 @@ import { computed } from "vue";
 import { useHead } from "@vueuse/head";
 import { useWindowSize } from "@vueuse/core";
 
-import IconLeave from "@/components/icon/IconLeave.vue";
-import IconDiscordInsoumis from "@/components/icon/IconDiscordInsoumis.vue";
-import BlinkAnimation from "@/components/BlinkAnimation.vue";
+import MainHeader from "@/components/MainHeader.vue";
 
 useHead({
 	title: "LAEC EST TOI",
@@ -70,4 +45,5 @@ useHead({
 const { width, height } = useWindowSize();
 
 const currRatio = computed(() => width.value / height.value);
+const shouldShow = computed(() => currRatio.value < 1 || height.value > 600);
 </script>

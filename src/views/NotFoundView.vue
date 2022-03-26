@@ -16,7 +16,7 @@
 				/>
 			</div>
 			<div class="font-draxel text-l">
-				La page que vous rechercher n'existe pas.
+				La page que vous recherchez n'existe pas.
 			</div>
 			<div>
 				<router-link
