@@ -2,7 +2,7 @@
 	<div
 		class="flex h-screen sm:h-auto flex-col sm:w-4/12 w-screen md:px-12 md:py-8 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[600px]"
 	>
-		<BlinkAnimation aria-label="trailer du jeu" class="mx-auto mb-2 h-14" />
+		<BlinkAnimation aria-label="logo" class="mx-auto mb-2 h-14" />
 		<video aria-hidden="true" controls poster="/preview.jpg">
 			<source src="/teaser-v02.mp4" type="video/mp4" />
 		</video>
