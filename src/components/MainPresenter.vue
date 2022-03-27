@@ -3,9 +3,16 @@
 		class="flex h-screen sm:h-auto flex-col sm:w-4/12 w-screen md:px-12 md:py-8 p-4 space-y-6 border border-black shadow-2xl bg-main-grey sm:rounded-2xl h-3/12 sm:min-w-[600px]"
 	>
 		<BlinkAnimation aria-label="logo" class="mx-auto mb-2 h-14" />
-		<video aria-hidden="true" controls poster="/preview.jpg">
-			<source src="/teaser-v02.mp4" type="video/mp4" />
-		</video>
+		<div aria-hidden="true" class="aspect-video w-full mx-auto">
+			<iframe
+				class="w-full h-full aspect-video"
+				src="https://www.youtube-nocookie.com/embed/xStek5MX7iQ"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			/>
+		</div>
 		<div class="flex self-center flex-col items-start">
 			<router-link class="flex pointer" to="/game">
 				<Button class="flex items-center font-draxel h-full">
