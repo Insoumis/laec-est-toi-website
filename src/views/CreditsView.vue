@@ -167,6 +167,7 @@
 
 					<div>BABA IS YOU</div>
 					<div>Kenney</div>
+					<div>VSO SOFTWARE</div>
 					<div>Le Bon Sens</div>
 					<div>Cyril M.</div>
 					<div>Herastodes</div>
