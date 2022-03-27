@@ -1,4 +1,3 @@
-require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
@@ -48,16 +47,9 @@ async function createServer(
 		);
 	}
 
-	app.use("*", async (req, res, next) => {
+	app.use("*", async (req, res) => {
 		try {
 			const url = req.originalUrl;
-			const envUrls = Object.keys(process.env)
-				.filter((key) => key.startsWith("VITE_GAME_URL"))
-				.map((key) =>
-					process.env[key].replace(/^https:\/\/.+\.fr/, "")
-				);
-
-			if (envUrls.includes(url)) return next();
 			let template, render;
 			if (!isProd) {
 				// always read fresh template in dev
