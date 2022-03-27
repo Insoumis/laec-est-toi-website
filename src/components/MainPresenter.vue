@@ -75,15 +75,15 @@
 			</a>
 		</div>
 		<p aria-label="Credits" class="mx-2 text-sm text-center text-[#BBB]">
-			Ce jeu vidéo est open-source et libre (sauf les musiques). Il a été
-			développé à 100% par des bénévoles du
+			Ce jeu vidéo s'inspire du concept de baba is you et est non affilié
+			à celui-ci. Il est open-source et libre (sauf les musiques) et a
+			été développé à 100% par des bénévoles du
 			<a
 				class="hover:text-gold text-white underline"
 				href=" https://discord-insoumis.fr/"
 				>Discord insoumis</a
 			>
-			avec l'accord du créateur de BABA IS YOU, que nous remercions et
-			avec lequel nous ne sommes pas affiliés.
+			.
 
 			<router-link
 				class="flex pointer justify-center mt-2 hover:text-gold"
