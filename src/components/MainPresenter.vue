@@ -70,7 +70,7 @@
 			<a class="flex" :href="ANDROID_URL" download>
 				<Button class="flex align-center font-draxel">
 					<IconArcade aria-hidden="true" class="h-6 w-6 mr-6" />
-					<div class="w-full flex">Jouer sur android</div>
+					<div class="w-full flex">Télécharger pour Android (APK)</div>
 				</Button>
 			</a>
 		</div>
